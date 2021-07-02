@@ -1,0 +1,32 @@
+
+> node-sass@4.14.1 install /home/khaled/Bureau/light-bootstrap-dashboard-react-master/node_modules/node-sass
+> node scripts/install.js
+
+Downloading binary from https://github.com/sass/node-sass/releases/download/v4.14.1/linux-x64-83_binding.node
+Download complete
+Binary saved to /home/khaled/Bureau/light-bootstrap-dashboard-react-master/node_modules/node-sass/vendor/linux-x64-83/binding.node
+
+> @fortawesome/fontawesome-free@5.15.2 postinstall /home/khaled/Bureau/light-bootstrap-dashboard-react-master/node_modules/@fortawesome/fontawesome-free
+> node attribution.js
+
+Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
+License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+
+
+> node-sass@4.14.1 postinstall /home/khaled/Bureau/light-bootstrap-dashboard-react-master/node_modules/node-sass
+> node scripts/build.js
+
+Binary found at /home/khaled/Bureau/light-bootstrap-dashboard-react-master/node_modules/node-sass/vendor/linux-x64-83/binding.node
+Testing binary
+Binary is fine
++ moment@2.29.1
++ react-dom@17.0.1
++ react@17.0.1
++ react-dates@21.8.0
+added 22 packages from 21 contributors, removed 125 packages, updated 16 packages and audited 2031 packages in 473.023s
+
+149 packages are looking for funding
+  run `npm fund` for details
+
+found 90 vulnerabilities (1 low, 85 moderate, 4 high)
+  run `npm audit fix` to fix them, or `npm audit` for details

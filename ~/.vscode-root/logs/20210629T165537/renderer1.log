@@ -1,0 +1,72 @@
+[2021-06-29 16:55:43.021] [renderer1] [error] Cannot convert undefined or null to object: TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at e.update (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:4030)
+    at e.<anonymous> (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:2862)
+    at /root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1385
+    at Object.next (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1490)
+    at /root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:392
+    at new Promise (<anonymous>)
+    at __awaiter (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:137)
+    at e.<anonymous> (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:2378)
+    at /root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1385
+    at Object.next (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1490)
+    at /root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:392
+    at new Promise (<anonymous>)
+    at __awaiter (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:137)
+    at e.Initialize (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1805)
+    at new e (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1744)
+    at activate (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/extension.js:1:259)
+    at Function._callActivateOptional (/snap/code/67/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:89:14966)
+    at Function._callActivate (/snap/code/67/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:89:14639)
+    at /snap/code/67/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:89:12799
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Promise.all (index 5)
+    at async Promise.all (index 0)
+[2021-06-29 16:57:09.165] [renderer1] [error] Cannot convert undefined or null to object: TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at e.update (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:4030)
+    at e.<anonymous> (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:2862)
+    at /root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1385
+    at Object.next (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1490)
+    at /root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:392
+    at new Promise (<anonymous>)
+    at __awaiter (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:137)
+    at e.<anonymous> (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:2378)
+    at /root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1385
+    at Object.next (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1490)
+    at /root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:392
+    at new Promise (<anonymous>)
+    at __awaiter (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:137)
+    at e.Initialize (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1805)
+    at new e (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1744)
+    at activate (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/extension.js:1:259)
+    at Function._callActivateOptional (/snap/code/67/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:89:14966)
+    at Function._callActivate (/snap/code/67/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:89:14639)
+    at /snap/code/67/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:89:12799
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Promise.all (index 0)
+    at m.$activate (/snap/code/67/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:89:20167)
+[2021-06-29 16:57:41.714] [renderer1] [error] Cannot convert undefined or null to object: TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at e.update (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:4030)
+    at e.<anonymous> (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:2862)
+    at /root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1385
+    at Object.next (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1490)
+    at /root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:392
+    at new Promise (<anonymous>)
+    at __awaiter (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:137)
+    at e.<anonymous> (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:2378)
+    at /root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1385
+    at Object.next (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1490)
+    at /root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:392
+    at new Promise (<anonymous>)
+    at __awaiter (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:137)
+    at e.Initialize (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1805)
+    at new e (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/Main.js:1:1744)
+    at activate (/root/.vscode/extensions/fooxly.workspace-1.1.2/out/extension.js:1:259)
+    at Function._callActivateOptional (/snap/code/67/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:89:14966)
+    at Function._callActivate (/snap/code/67/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:89:14639)
+    at /snap/code/67/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:89:12799
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Promise.all (index 5)
+    at async Promise.all (index 0)

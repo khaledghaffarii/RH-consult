@@ -1,0 +1,28 @@
+[2021-06-29 16:55:40.491] [sharedprocess] [info] Deleted from disk bradlc.vscode-tailwindcss /root/.vscode/extensions/bradlc.vscode-tailwindcss-0.6.8
+[2021-06-29 16:55:40.539] [sharedprocess] [info] Deleted from disk esbenp.prettier-vscode /root/.vscode/extensions/esbenp.prettier-vscode-6.4.0
+[2021-06-29 16:55:40.624] [sharedprocess] [info] Deleted from disk wallabyjs.quokka-vscode /root/.vscode/extensions/wallabyjs.quokka-vscode-1.0.374
+[2021-06-29 16:55:42.638] [sharedprocess] [error] [uncaught exception in sharedProcess]: The "path" argument must be of type string. Received type undefined: Error: The "path" argument must be of type string. Received type undefined
+    at C (file:///snap/code/67/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:14:14258)
+    at Object.basename (file:///snap/code/67/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:14:22494)
+    at i.groupImportantTipsByExe (file:///snap/code/67/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:47:5099)
+    at i.collectTips (file:///snap/code/67/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:47:4594)
+    at async file:///snap/code/67/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:47:3791
+[2021-06-29 16:55:44.626] [sharedprocess] [info] Installing extension: emmanuelbeziat.vscode-great-icons
+[2021-06-29 16:55:44.627] [sharedprocess] [info] Installing extension: esbenp.prettier-vscode
+[2021-06-29 16:55:44.628] [sharedprocess] [info] Installing extension: tabnine.tabnine-vscode
+[2021-06-29 16:55:59.529] [sharedprocess] [info] Downloaded extension: tabnine.tabnine-vscode /home/khaled/Bureau/light-bootstrap-dashboard-react-master/~/.vscode-root/CachedExtensionVSIXs/tabnine.tabnine-vscode-3.4.11
+[2021-06-29 16:55:59.567] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.470a918d-96a4-434c-a27d-305827f7d812: tabnine.tabnine-vscode
+[2021-06-29 16:55:59.572] [sharedprocess] [info] Renamed to /root/.vscode/extensions/tabnine.tabnine-vscode-3.4.11
+[2021-06-29 16:55:59.573] [sharedprocess] [info] Installation completed. tabnine.tabnine-vscode
+[2021-06-29 16:55:59.581] [sharedprocess] [info] Extensions installed successfully: tabnine.tabnine-vscode
+[2021-06-29 16:56:03.441] [sharedprocess] [info] Downloaded extension: emmanuelbeziat.vscode-great-icons /home/khaled/Bureau/light-bootstrap-dashboard-react-master/~/.vscode-root/CachedExtensionVSIXs/emmanuelbeziat.vscode-great-icons-2.1.79
+[2021-06-29 16:56:03.740] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.0d7c1c8e-835b-4614-9f4c-34435ba338f6: emmanuelbeziat.vscode-great-icons
+[2021-06-29 16:56:03.743] [sharedprocess] [info] Renamed to /root/.vscode/extensions/emmanuelbeziat.vscode-great-icons-2.1.79
+[2021-06-29 16:56:03.744] [sharedprocess] [info] Installation completed. emmanuelbeziat.vscode-great-icons
+[2021-06-29 16:56:03.747] [sharedprocess] [info] Extensions installed successfully: emmanuelbeziat.vscode-great-icons
+[2021-06-29 16:56:19.553] [sharedprocess] [info] Starting to clean up unused language packs.
+[2021-06-29 16:57:40.922] [sharedprocess] [info] Downloaded extension: esbenp.prettier-vscode /home/khaled/Bureau/light-bootstrap-dashboard-react-master/~/.vscode-root/CachedExtensionVSIXs/esbenp.prettier-vscode-8.0.1
+[2021-06-29 16:57:42.053] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.ac033789-3878-4426-81e3-c79fc65a1a06: esbenp.prettier-vscode
+[2021-06-29 16:57:42.063] [sharedprocess] [info] Renamed to /root/.vscode/extensions/esbenp.prettier-vscode-8.0.1
+[2021-06-29 16:57:42.063] [sharedprocess] [info] Installation completed. esbenp.prettier-vscode
+[2021-06-29 16:57:42.063] [sharedprocess] [info] Extensions installed successfully: esbenp.prettier-vscode

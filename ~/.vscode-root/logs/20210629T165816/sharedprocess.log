@@ -1,0 +1,22 @@
+[2021-06-29 16:58:18.245] [sharedprocess] [info] Deleted from disk emmanuelbeziat.vscode-great-icons /root/.vscode/extensions/emmanuelbeziat.vscode-great-icons-2.1.77
+[2021-06-29 16:58:18.245] [sharedprocess] [info] Deleted from disk tabnine.tabnine-vscode /root/.vscode/extensions/tabnine.tabnine-vscode-3.4.8
+[2021-06-29 16:58:18.279] [sharedprocess] [info] Deleted from disk esbenp.prettier-vscode /root/.vscode/extensions/esbenp.prettier-vscode-7.1.1
+[2021-06-29 16:58:20.604] [sharedprocess] [error] [uncaught exception in sharedProcess]: The "path" argument must be of type string. Received type undefined: Error: The "path" argument must be of type string. Received type undefined
+    at C (file:///snap/code/67/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:14:14258)
+    at Object.basename (file:///snap/code/67/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:14:22494)
+    at i.groupImportantTipsByExe (file:///snap/code/67/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:47:5099)
+    at i.collectTips (file:///snap/code/67/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:47:4594)
+    at async file:///snap/code/67/usr/share/code/resources/app/out/vs/code/electron-browser/sharedProcess/sharedProcessMain.js:47:3791
+[2021-06-29 16:58:57.550] [sharedprocess] [info] Starting to clean up unused language packs.
+[2021-06-29 17:00:55.449] [sharedprocess] [info] Installing extension: rslfrkndmrky.rsl-vsc-focused-folder
+[2021-06-29 17:00:58.637] [sharedprocess] [info] Downloaded extension: rslfrkndmrky.rsl-vsc-focused-folder /home/khaled/Bureau/light-bootstrap-dashboard-react-master/~/.vscode-root/CachedExtensionVSIXs/rslfrkndmrky.rsl-vsc-focused-folder-0.2.1
+[2021-06-29 17:00:58.673] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.52ca9cb2-f721-4b28-a68e-3873f3631a56: rslfrkndmrky.rsl-vsc-focused-folder
+[2021-06-29 17:00:58.679] [sharedprocess] [info] Renamed to /root/.vscode/extensions/rslfrkndmrky.rsl-vsc-focused-folder-0.2.1
+[2021-06-29 17:00:58.680] [sharedprocess] [info] Installation completed. rslfrkndmrky.rsl-vsc-focused-folder
+[2021-06-29 17:00:58.684] [sharedprocess] [info] Extensions installed successfully: rslfrkndmrky.rsl-vsc-focused-folder
+[2021-06-29 20:17:42.511] [sharedprocess] [info] Installing extension: huuums.vscode-fast-folder-structure
+[2021-06-29 20:17:47.601] [sharedprocess] [info] Downloaded extension: huuums.vscode-fast-folder-structure /home/khaled/Bureau/light-bootstrap-dashboard-react-master/~/.vscode-root/CachedExtensionVSIXs/huuums.vscode-fast-folder-structure-3.4.1
+[2021-06-29 20:17:47.812] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.b87a9164-e6c4-43be-a82f-d4b7b3fd7457: huuums.vscode-fast-folder-structure
+[2021-06-29 20:17:47.817] [sharedprocess] [info] Renamed to /root/.vscode/extensions/huuums.vscode-fast-folder-structure-3.4.1
+[2021-06-29 20:17:47.818] [sharedprocess] [info] Installation completed. huuums.vscode-fast-folder-structure
+[2021-06-29 20:17:47.821] [sharedprocess] [info] Extensions installed successfully: huuums.vscode-fast-folder-structure
