@@ -3,6 +3,7 @@ import "react-dates/initialize";
 import AdminNavbar from "components/Navbars/AdminNavbar";
 import { DateRangePicker, SingleDatePicker } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
+import { Redirect } from "react-router-dom";
 import {
   Badge,
   Button,
@@ -33,6 +34,8 @@ const request = () => {
   const [commentDays, setCommentDays] = useState("");
   const [commentHour, setCommentHour] = useState("");
   const [calculate, setCalculate] = useState(false);
+  const [dataDays , setDataDays ] = useState(false)
+  const [dataHour, setDataHour] = useState(false);
   useEffect(() => {
     return setStartDate1(startDate);
   });
@@ -52,7 +55,7 @@ const request = () => {
   function selectHandelTimes() {
     const selectStart = document.getElementById("timeDays");
     console.log(selectStart.value);
-    if (selectStart.value === "Morning") {
+    if (selectStart.value === "All Day") {
       setTimeOfDays(selectStart.value);
     }
     if (selectStart.value === "Afternoon") {
@@ -62,10 +65,10 @@ const request = () => {
   function selectHandelTimesEnd() {
     const selectEnd = document.getElementById("timeDaysEnd");
 
-    if (selectEnd.value === "Morning") {
+    if (selectEnd.value === "All Day") {
       setTimeOfDaysEnd(selectEnd.value);
     }
-    if (selectEnd.value === "Afternoon") {
+    if (selectEnd.value === "Morning") {
       setTimeOfDaysEnd(selectEnd.value);
     }
   }
@@ -103,8 +106,17 @@ const request = () => {
     setShowHour(true);
   }
   function onCalculateDaysHandler() {
- 
-    setCalculate(true)
+    setDataDays(true)
+    setCalculate(true);
+    setShowHour(false);
+    setShowDays(false);
+  }
+  function onCalculateHourHandler() {
+        setDataDays(false);
+    setCalculate(true);
+    setDataHour(true);
+    setShowHour(false);
+    setShowDays(false);
   }
   return (
     <div>
@@ -148,6 +160,7 @@ const request = () => {
                           />
                         </Form.Group>
                       </Col>
+                      {/* //////////////////////////////////////  absence per hour  ////////////////////////////////////////////////////*/}
                       {date ? (
                         <Row>
                           <Col className="ml-3 pr-1" md="5">
@@ -271,11 +284,28 @@ const request = () => {
                     </Button> */}
                     </div>
                   ) : null}
+                  {/*  /////////////////////////////////////////// absence per days    /////////////////////////////////////// */}
+
                   {showDays ? (
                     <div>
                       {" "}
                       <Row>
-                        <Col className="ml-1 pr-1" md="5">
+                        <Row>
+                         <Form.Group
+                                className = "mb-3"
+                                controlId = "formBasicCheckbox"
+                            >
+                              <Form.Check
+                                type="checkbox"
+                              label="Check me out"
+                            />
+                            </Form.Group>
+                          <Col className="ml-3 pr-1" md="5">
+                           
+
+                          </Col>
+                        </Row>
+                        <Col className="ml-3 pr-1" md="5">
                           <Form.Group>
                             <label>Choose Date</label>
                             <DateRangePicker
@@ -297,7 +327,7 @@ const request = () => {
                       </Row>
                       {startDate ? (
                         <Row>
-                          <Col className="ml-3 px-1" md="5">
+                          <Col className="ml-4 px-1" md="5">
                             <Form.Group>
                               <label>Departure Date</label>
                               <Form.Control
@@ -308,22 +338,22 @@ const request = () => {
                               ></Form.Control>
                             </Form.Group>
                           </Col>
-                          <Col className="ml-1 mt-4 pr-1" md="5">
+                          <Col className="ml-4 mt-4 pr-1" md="5">
                             <select
                               style={{ width: 150, height: 40, marginTop: 4 }}
                               onChange={selectHandelTimes}
                               id="timeDays"
                             >
                               <option>---</option>
-                              <option value="Morning">Morning</option>
-                              <option value="Afternoon">Afternoons</option>
+                              <option value="All Day">All Day</option>
+                              <option value="Afternoon">Afternoon</option>
                             </select>
                           </Col>
                         </Row>
                       ) : null}
                       {endDate ? (
                         <Row>
-                          <Col className="ml-3 px-1" md="5">
+                          <Col className="ml-4 px-1" md="5">
                             <Form.Group>
                               <label> END DATE </label>
                               <Form.Control
@@ -334,7 +364,7 @@ const request = () => {
                               ></Form.Control>
                             </Form.Group>
                           </Col>
-                          <Col className="ml-1 mt-4 pr-1" md="5">
+                          <Col className="ml-4 mt-4 pr-1" md="5">
                             <select
                               style={{ width: 150, height: 40, marginTop: 4 }}
                               onChange={selectHandelTimesEnd}
@@ -342,8 +372,8 @@ const request = () => {
                             >
                               {" "}
                               <option>---</option>
+                              <option value="All Day">All Day</option>
                               <option value="Morning">Morning</option>
-                              <option value="Afternoon">Afternoons</option>
                             </select>
                           </Col>
                         </Row>
@@ -366,41 +396,55 @@ const request = () => {
                           </Col>
                         </Row>
                       ) : null}
-                      {/* <Button
-                      className="  mb-5 btn-fill pull-right"
-                      type="submit"
-                      variant="info"
-                    >
-                      Submit
-                    </Button> */}
                     </div>
                   ) : null}
-
-                  <div className="clearfix"></div>
                 </Form>
               </Card>
             ) : (
+              //////////////////////////////////////////////////// calculate function  //////////////////////////////////////////////////////////////////
               <Card style={{ height: 200 }}>
-                <Table className="table-hover">
-                  <thead>
-                    <tr>
-                      <th className="border-0">Start Date</th>
-                      <th className="border-0">Start Time </th>
-                      <th className="border-0">End Date</th>
-                      <th className="border-0">End Time</th>
-                      <th className="border-0">Comment</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td> {JSON.stringify(startDate._d)} </td>
-                      <td>{timeOfDays} </td>
-                      <td>{JSON.stringify(endDate._d)}</td>
-                      <td>{timeOfDaysEnd}</td>
-                      <td>{commentDays}</td>
-                    </tr>
-                  </tbody>
-                </Table>
+                {dataDays ? (
+                  <Table className="table-hover">
+                    <thead>
+                      <tr>
+                        <th className="border-0">Start Date</th>
+                        <th className="border-0">Start Time </th>
+                        <th className="border-0">End Date</th>
+                        <th className="border-0">End Time</th>
+                        <th className="border-0">Comment</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> {JSON.stringify(startDate._d)} </td>
+                        <td>{timeOfDays} </td>
+                        <td>{JSON.stringify(endDate._d)}</td>
+                        <td>{timeOfDaysEnd}</td>
+                        <td>{commentDays}</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                ) : (
+                  <Table className="table-hover">
+                    <thead>
+                      <tr>
+                        <th className="border-0">day of absence </th>
+                        <th className="border-0">Start Hour </th>
+                        <th className="border-0">End Hour </th>
+                        <th className="border-0">comment </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> {JSON.stringify(date)} </td>
+                        <td>{departureHour} </td>
+                        <td>{ArrivingHour}</td>
+                        <td>{commentHour}</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                )}
+
                 <Row>
                   <Col className="ml-3" md="12" sm="12">
                     <Button
@@ -412,7 +456,7 @@ const request = () => {
                     </Button>
                     <Button
                       className=" ml-5 mb-5 btn-fill pull-right"
-                      onClick={onClickDaysCancel}
+                      onClick={(event) => (window.location.href = "request")}
                       variant="danger"
                     >
                       Cancel
@@ -422,126 +466,125 @@ const request = () => {
               </Card>
             )}
           </Col>
-          <Col md="4">
-            <Card className="card-user">
-              <div className="card-image">
-                <img
-                  alt="..."
-                  src={
-                    require("assets/img/photo-1431578500526-4d9613015464.jpeg")
-                      .default
-                  }
-                ></img>
-              </div>
-              <Card.Body>
-                <div>
-                  {showDays && !showHour ? (
-                    <div className="description font-weight-bold">
-                      <h4>Absence per Days </h4>
-                    </div>
-                  ) : null}
-                  {startDate && !showHour ? (
-                    <div className="description font-weight-bold">
-                      <strong> Start Date :</strong>
-                      <p>{JSON.stringify(startDate._d)}</p>
-                    </div>
-                  ) : null}
-                  {timeOfDays && !showHour ? (
-                    <div className="description font-weight-bold">
-                      <strong> Start Time :</strong>
-                      <p>{timeOfDays} </p>
-                    </div>
-                  ) : null}
-                  {endDate && !showHour ? (
-                    <div className="description font-weight-bold">
-                      <strong> End Date :</strong>
-                      <p> {JSON.stringify(endDate._d)}</p>
-                    </div>
-                  ) : null}
-                  {timeOfDaysEnd && !showHour ? (
-                    <div className="description font-weight-bold">
-                      <strong> End Time :</strong>
-                      <p> {timeOfDaysEnd} </p>
-                    </div>
-                  ) : null}
-                  {commentDays &&
-                  timeOfDaysEnd &&
-                  endDate &&
-                  timeOfDays &&
-                  startDate &&
-                  showDays &&
-                  !showHour ? (
-                    <div className="description font-weight-bold">
-                      <strong> comment : </strong> <p> {commentDays} </p>
-                      <Button
-                        className=" mb-5 btn-fill pull-right"
-                        onClick={onCalculateDaysHandler}
-                        variant="info"
-                      >
-                        Calculate
-                      </Button>
-                      <Button
-                        className=" ml-5 mb-5 btn-fill pull-right"
-                        onClick={onClickDaysCancel}
-                        variant="danger"
-                      >
-                        Cancel
-                      </Button>
-                    </div>
-                  ) : null}
+          {/* ////////////////////////////////////////////////////// Display Data ////////////////////////////////////////////////////////////// */}
 
-                  {showHour && !showDays ? (
-                    <div className="description font-weight-bold">
-                      <h4>Absence per Hour </h4>
-                    </div>
-                  ) : null}
-                  {date && !showDays ? (
-                    <div className="description font-weight-bold">
-                      <strong> day of absence : </strong>
-                      <p> {JSON.stringify(date)} </p>
-                    </div>
-                  ) : null}
-                  {departureHour && !showDays ? (
-                    <div className="description font-weight-bold">
-                      <strong>Start Hour : </strong>
-                      <p> {departureHour} </p>
-                    </div>
-                  ) : null}
-                  {ArrivingHour && !showDays ? (
-                    <div className="description font-weight-bold">
-                      <strong>End Hour : </strong>
-                      <p> {ArrivingHour} </p>
-                    </div>
-                  ) : null}
-                  {commentHour &&
-                  ArrivingHour &&
-                  departureHour &&
-                  date &&
-                  showHour &&
-                  !showDays ? (
-                    <div className="description font-weight-bold">
-                      <strong> comment : </strong> <p> {commentHour}</p>
-                      <Button
-                        className=" mb-5 btn-fill pull-right"
-                        type="submit"
-                        variant="info"
-                      >
-                        Calculate
-                      </Button>
-                      <Button
-                        className=" ml-5 mb-5 btn-fill pull-right"
-                        onClick={onClickHourCancel}
-                        variant="danger"
-                      >
-                        Cancel
-                      </Button>
-                    </div>
-                  ) : null}
-                </div>
-              </Card.Body>
-              <hr></hr>
-            </Card>
-          </Col>
+          {showDays || showHour ? (
+            <Col md="4">
+              <Card className="card-user">
+                <Card.Body>
+                  <div>
+                    {/* /////////////////////////////////////// display data absence days ///////////////////////////////////////////////////////////// */}
+
+                    {showDays && !showHour ? (
+                      <div className="description font-weight-bold">
+                        <h4>Absence per Days </h4>
+                      </div>
+                    ) : null}
+                    {startDate && !showHour ? (
+                      <div className="description font-weight-bold">
+                        <strong> Start Date :</strong>
+                        <p>{JSON.stringify(startDate._d)}</p>
+                      </div>
+                    ) : null}
+                    {timeOfDays && !showHour ? (
+                      <div className="description font-weight-bold">
+                        <strong> Start Time :</strong>
+                        <p>{timeOfDays} </p>
+                      </div>
+                    ) : null}
+                    {endDate && !showHour ? (
+                      <div className="description font-weight-bold">
+                        <strong> End Date :</strong>
+                        <p> {JSON.stringify(endDate._d)}</p>
+                      </div>
+                    ) : null}
+                    {timeOfDaysEnd && !showHour ? (
+                      <div className="description font-weight-bold">
+                        <strong> End Time :</strong>
+                        <p> {timeOfDaysEnd} </p>
+                      </div>
+                    ) : null}
+                    {commentDays &&
+                    timeOfDaysEnd &&
+                    endDate &&
+                    timeOfDays &&
+                    startDate &&
+                    showDays &&
+                    !showHour ? (
+                      <div className="description font-weight-bold">
+                        <strong> comment : </strong> <p> {commentDays} </p>
+                        <Button
+                          className=" mb-5 btn-fill pull-right"
+                          onClick={onCalculateDaysHandler}
+                          variant="info"
+                        >
+                          Calculate
+                        </Button>
+                        <Button
+                          className=" ml-5 mb-5 btn-fill pull-right"
+                          onClick={onClickDaysCancel}
+                          variant="danger"
+                        >
+                          Cancel
+                        </Button>
+                      </div>
+                    ) : null}
+                    {/* /////////////////////////////////////// display data absence hour ///////////////////////////////////////////////////////////// */}
+
+                    {showHour && !showDays ? (
+                      <div className="description font-weight-bold">
+                        <h4>Absence per Hour </h4>
+                      </div>
+                    ) : null}
+                    {date && !showDays ? (
+                      <div className="description font-weight-bold">
+                        <strong> day of absence : </strong>
+                        <p> {JSON.stringify(date)} </p>
+                      </div>
+                    ) : null}
+                    {departureHour && !showDays ? (
+                      <div className="description font-weight-bold">
+                        <strong>Start Hour : </strong>
+                        <p> {departureHour} </p>
+                      </div>
+                    ) : null}
+                    {ArrivingHour && !showDays ? (
+                      <div className="description font-weight-bold">
+                        <strong>End Hour : </strong>
+                        <p> {ArrivingHour} </p>
+                      </div>
+                    ) : null}
+                    {commentHour &&
+                    ArrivingHour &&
+                    departureHour &&
+                    date &&
+                    showHour &&
+                    !showDays ? (
+                      <div className="description font-weight-bold">
+                        <strong> comment : </strong> <p> {commentHour}</p>
+                        <Button
+                          className=" mb-5 btn-fill pull-right"
+                          type="submit"
+                          variant="info"
+                          onClick={onCalculateHourHandler}
+                        >
+                          Calculate
+                        </Button>
+                        <Button
+                          className=" ml-5 mb-5 btn-fill pull-right"
+                          onClick={onClickHourCancel}
+                          variant="danger"
+                        >
+                          Cancel
+                        </Button>
+                      </div>
+                    ) : null}
+                  </div>
+                </Card.Body>
+                <hr></hr>
+              </Card>
+            </Col>
+          ) : null}
         </Row>
       </Container>
     </div>
